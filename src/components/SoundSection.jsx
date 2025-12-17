@@ -1,6 +1,16 @@
 import React from "react";
+import gsap from "gsap";
 
 function SoundSection() {
+
+    const handleLearnMore = () => {
+        gsap.to(window, {
+            duration: 1.5,
+            scrollTo: ".display-section",
+            ease: "power2.inOut"
+        });
+    };
+
     return (
         <div className="sound-section wrapper">
             <div className="body">
@@ -13,7 +23,7 @@ function SoundSection() {
                             <button className="button">Comprar</button>
                         </li>
                         <li>
-                            <a className="link">Saber Más</a>
+                            <a className="link" onClick={handleLearnMore}>Saber Más</a>
                         </li>
                     </ul>
                 </div>
